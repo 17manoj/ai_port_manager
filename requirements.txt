@@ -16,3 +16,10 @@ plotly==5.24.1
 
 # Standard Library Extensions (Python 3.12 compatible)
 typing-extensions==4.12.2
+
+# AI and LangChain Dependencies (for ai_agent.py)
+langchain
+langchain-community
+langchain-openai
+langchain-tavily
+openai

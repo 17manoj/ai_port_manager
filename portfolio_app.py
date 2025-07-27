@@ -9,7 +9,9 @@ import yfinance as yf
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from ai_agent import *
 import datetime
+
 import os
 from typing import Dict, List, Optional
 import numpy as np
@@ -42,7 +44,7 @@ def rate_limited_api_call(func, *args, **kwargs):
 
 # Page configuration
 st.set_page_config(
-    page_title="📈 Agentic AI - Portfolio Manager",
+    page_title="📈 AI - Portfolio Manager",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -490,7 +492,7 @@ def main():
     portfolio_manager = PortfolioManager()
     
     # Header
-    st.markdown('<h1 class="main-header">📈 Agentic AI - Portfolio Manager </h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">📈  AI - Portfolio Manager </h1>', unsafe_allow_html=True)
     
     # Sidebar for adding stocks
     with st.sidebar:
@@ -638,15 +640,27 @@ def main():
                                 st.error("❌ Failed to remove stock")
         
         # Export option
-        st.subheader("📤 Export Portfolio")
-        if st.button("📋 Download Portfolio as CSV"):
-            csv = portfolio_df.to_csv(index=False)
-            st.download_button(
-                label="💾 Download CSV",
-                data=csv,
-                file_name=f"portfolio_{datetime.date.today().strftime('%Y%m%d')}.csv",
-                mime="text/csv"
-            )
+        st.subheader("🤖 AI Portfolio Analysis")
+        
+        col1, col2 = st.columns([1, 1])
+
+        with col1:
+            openai_key = st.text_input("OpenAI API Key", type="password", placeholder="Enter your OpenAI API key")
+            tavily_key = st.text_input("Tavily API Key", type="password", placeholder="Enter your Tavily API key")
+            if st.button("🔍 AI Analysis", key="ai_analysis_btn", type="primary", help="Get AI-powered insights on your portfolio"):
+                if openai_key and tavily_key:
+                    with st.spinner("🧠 AI is analyzing your portfolio..."):
+                        time.sleep(125)
+                        agent = StockAnalysisAgent(
+                                    openai_api_key=openai_key,
+                                    tavily_api_key=tavily_key
+                            )
+                        stock_data = pd.read_csv('portfolio.csv')
+                        result = agent.analyze_stocks(stock_data, current_date=datetime.datetime.now())
+                        st.success("✅ AI analysis complete!")
+                        st.write(result['analysis'])
+                else:
+                    st.warning("Sharing my OpenAI key sounded like a good idea—until I realized my account was running more queries than Google on a Monday morning. Please… save my bank account. Get your own key!")
 
 if __name__ == "__main__":
     main()
