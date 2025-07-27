@@ -1,0 +1,203 @@
+# Python Environment Files and Folders
+*.env
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*
+
+# Virtual Environment Directories
+venv/
+st_env/
+ENV/
+portfolio_env/
+.venv/
+.ENV/
+.env/
+
+# Conda Environment
+conda-meta/
+.conda/
+
+# PyEnv
+.python-version
+
+# Python Cache and Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.logs
+
+# API Keys and Secrets
+secrets.json
+config.json
+credentials.json
+.secrets
+api_keys.txt
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+
+# CSV Data Files (Optional - uncomment if you want to exclude portfolio data)
+# portfolio.csv
+# *.csv
+
+# Streamlit Cache
+.streamlit/
+
+# Local Configuration
+local_settings.py
+local_config.py
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Package manager files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache/
+.cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Windows
+*.lnk
+Desktop.ini
+
+# Linux
+*~
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyTorch
+*.pth
+
+# TensorFlow
+*.ckpt*
+*.pb
+
+# Model files
+*.pkl
+*.pickle
+*.joblib
+*.model
+
+# Large data files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Node modules (if any JavaScript dependencies)
+node_modules/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

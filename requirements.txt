@@ -1,0 +1,18 @@
+# Core Streamlit and Portfolio App Dependencies
+# Tested for Python 3.12+ compatibility
+
+# Web Framework
+streamlit==1.39.0
+
+# Data Analysis and Manipulation
+pandas==2.2.3
+numpy==1.26.4
+
+# Financial Data
+yfinance==0.2.38
+
+# Interactive Plotting
+plotly==5.24.1
+
+# Standard Library Extensions (Python 3.12 compatible)
+typing-extensions==4.12.2
