@@ -1,6 +1,6 @@
 # 🧠 AI-Powered Portfolio Manager
 
-![Portfolio Manager Screenshot](Image.png)
+![Portfolio Manager Screenshot](Image.PNG)
 
 **Advanced Portfolio Intelligence System with AI-Driven Stock Analysis**
 
