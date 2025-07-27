@@ -1,5 +1,7 @@
 # 🧠 AI-Powered Portfolio Manager
 
+![Portfolio Manager Screenshot](image.png)
+
 **Advanced Portfolio Intelligence System with AI-Driven Stock Analysis**
 
 A sophisticated financial technology platform that combines real-time market data, intelligent portfolio management, and cutting-edge AI analysis to provide comprehensive investment insights and early warning indicators for your stock portfolio.
